@@ -1,0 +1,24 @@
+@import "_variables";
+@import "_reset";
+
+.container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main{
+    flex: 1 1 auto;
+}
+
+[class*="__container"] {
+    max-width: 1240px;
+    padding: 0 35px;
+    margin: 0 auto;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', {"title":"Zing - Home"})
+  <body>
+    <div class="container">
+      @@include('html/header.html',{})
+      <main class="main">
+        <section class="main__home home">
+          <div class="home__container">
+            <h1 class="home__title">Amazing furniture for your home</h1>
+            <p class="home__description">
+              We think the chair is the most important piece of furniture in
+              your home. Because if you love the chair you are sitting in
+              chances are you will love the rest of the room.
+            </p>
+            <form class="form-search">
+              <div class="form-search__elem">
+                <input type="text" name="search" id="" class="search-field" placeholder="Search your product" />
+                <div class="icon-search"></div>
+              </div>
+            </form>
+          </div>
+          <img class="home__banner" src="" alt="Banner">
+        </section>
+        <section class="main__about about">
+          <div class="about__container">
+            <div class="about__wrapper">
+              <h2 class="about__title">About us</h2>
+              <p class="about__remarks">
+                Comfort is key and how you feel about your chair will affect how
+                you feel and your mood.
+              </p>
+              <div class="about__component">
+                <div class="component">
+                  <div class="component__number">1</div>
+                  <h3 class="component__title">Mission</h3>
+                  <div class="component__description">
+                    It makes people at ease and feel like they want to open up.
+                  </div>
+                </div>
+                <div class="component">
+                  <div class="component__number">2</div>
+                  <h3 class="component__title">Motivation</h3>
+                  <div class="component__description">
+                    The perfect mix of art that complements the room's style.
+                  </div>
+                </div>
+                <div class="component">
+                  <div class="component__number">3</div>
+                  <h3 class="component__title">Vision</h3>
+                  <div class="component__description">
+                    Along with a healthy dose of negative space to give the eyes
+                    spots to rest.
+                  </div>
+                </div>
+                <div class="component">
+                  <div class="component__number">4</div>
+                  <h3 class="component__title">Goal</h3>
+                  <div class="component__description">
+                    Art that has meaning to the people who live in the space.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="about__wrapper">
+              <img src="" alt="Interior image" class="about__img" />
+              <img src="" alt="Interior image" class="about__img" />
+              <img src="" alt="Interior image" class="about__img" />
+              <img src="" alt="Interior image" class="about__img" />
+            </div>
+          </div>
+        </section>
+        <section class="main__products">
+          <div class="products__container">
+            <h2 class="products__title">Products</h2>
+            <div class="tab">
+              <button class="tab__link" type="button">All</button
+              ><button class="tab__link" type="button">Chair</button
+              ><button class="tab__link" type="button">Table</button
+              ><button class="tab__link" type="button">Bed</button
+              ><button class="tab__link" type="button">Closet</button
+              ><button class="tab__link" type="button">Sofa</button
+              ><button class="tab__link" type="button">Cabinet</button>
+            </div>
+            <div class="products__view">
+              <div class="card">
+                <div class="card__body">
+                  <img src="" alt="" class="card__img" />
+                  <div class="card__description">
+                    <strong class="card__product-name"></strong>
+                    <span class="card__price"></span>
+                    <a href="" class="card__link"></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="main__testimonial testimonial">
+          <h2 class="testimonial-title">What do customers say...</h2>
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </section>
+        <section class="main__conatact contact">
+          <div class="conatact__container">
+            <div class="contact__images"></div>
+            <form class="conatact__form form">
+              <h2 class="contact__title">Contact us</h2>
+              <p class="contact__description">
+                Our team would love to hear from you!
+              </p>
+              <input
+                type="text"
+                name="username"
+                id=""
+                class="form__input"
+                placeholder="First name"
+              />
+              <input
+                type="text"
+                name="surname"
+                id=""
+                class="form__input"
+                placeholder="Last name"
+              />
+              <input
+                type="text"
+                name="email"
+                id=""
+                class="form__input"
+                placeholder="Email address"
+              />
+              <textarea
+                name="message"
+                id=""
+                cols="30"
+                rows="10"
+                class="form__message"
+                placeholder="Message"
+              ></textarea
+              ><button class="btn form__send-btn" type="submit">
+                Send message
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+    @@include('html/footer.html',{})
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
