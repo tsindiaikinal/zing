@@ -37,7 +37,7 @@ export const ttfToWoff = () => {
 
 export const setFontFace = () => {
   // Записываем подключение шрифтов в файл стилей
-  let fontsFile = `${app.path.srcFolder}/sass/fonts.scss`;
+  let fontsFile = `${app.path.srcFolder}/sass/_fonts.scss`;
   fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
     if (fontsFiles) {
       // Проверка на наличие файла стилей для подключения шрифтов
