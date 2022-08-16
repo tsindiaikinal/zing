@@ -7,8 +7,12 @@
   padding: 0;
 }
 
-ul[class],
-ol[class] {
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
   padding: 0;
 }
 
@@ -18,8 +22,8 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
+ul,
+ol,
 li,
 figure,
 figcaption,
@@ -38,8 +42,8 @@ body {
   text-rendering: optimizeSpeed;
 }
 
-ul[class],
-ol[class] {
+ul,
+ol {
   list-style: none;
 }
 
