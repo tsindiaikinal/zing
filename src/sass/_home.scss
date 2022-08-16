@@ -1,0 +1,40 @@
+/* HOME BLOCK */
+.home {
+  &__container {
+    text-align: center;
+  }
+
+  &__title {
+    width: 82%;
+    font-weight: $font-weight-title;
+    font-size: $font-main-title;
+    margin: 0 auto;
+    padding-bottom: 40px;
+  }
+
+  &__description {
+    width: 65.5%;
+    font-size: 1.25rem;
+    color: $gray;
+    line-height: 32px;
+    margin: 0 auto;
+  }
+
+  &__banner {
+  }
+}
+/* ----------------------- */
+@media screen and (max-width: xxl) {
+}
+@media screen and (max-width: xl) {
+}
+@media screen and (max-width: lg) {
+}
+@media screen and (max-width: md) {
+}
+@media screen and (max-width: sm) {
+}
+@media screen and (max-width: ms) {
+}
+@media screen and (max-width: xs) {
+}
