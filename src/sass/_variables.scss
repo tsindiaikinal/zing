@@ -1,8 +1,71 @@
 /* VARIABLES */
 $xs: 320px;
+$ms: 479.98px;
 $sm: 575.98px;
 $md: 767.98px;
 $lg: 991.98px;
 $xl: 1199.98px;
 $xxl: 1399.98px;
 /* ---------- */
+
+/* COLORS */
+$black: #000000;
+$dark-blue: #112B3C;
+$gray: #828282;
+$light-gray: #BDBDBD;
+$orange: #F66B0E;
+$beige: #FFF8F0;
+$white: #fff;
+
+/* ------------- */
+
+/* ------ FONTS ----- */
+
+$main-font: "SourceSansPro", sans-serif;
+$font-link: "";
+$font-title: "";
+
+/* ------------------------------------ */
+
+/* ---- FONT SIZES ------ */
+$base-font-size: 1rem; // 16px - default size in browser
+$font-size-title: 4rem;
+$font-main-title: 6rem;
+$font-size-link: "";
+$common-font-size: 1.25rem;
+// $another-font-size: "";
+/* -------------------------- */
+
+/* --------- FONT WEIGHT ----------- */
+$base-weight: 400;
+$font-weight-title: 700;
+$font-weight-link: "";
+/* ----------------------------------*/
+
+
+/* ------ COMMON CLASSES ---------- */
+// for insert to code: @extend
+%common-class {
+    font-size: $base-font-size;
+    font-family: $main-font;
+    font-weight: $base-weight;
+}
+/* ---------------------------- */
+
+
+/* --------- MIXINS --------- */
+// template for insert in code
+// for insert in code: @include
+
+@mixin base($font, $fontSize, $fontWeight, $color) {
+    font-size: $fontSize;
+    font-family: $font;
+    font-weight: $fontWeight;
+    color: $color;
+}
+/* ----- USE FUNCTION ------ */
+// include to top scss file: @use "sass:name_function"
+// For example: @use "sass:color";
+// Maybe available for example lighten(), darken() and etc...
+// DOCS: https://sass-lang.com/documentation/modules/color
+/* --------------------------------- */
