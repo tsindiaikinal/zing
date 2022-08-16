@@ -1,0 +1,84 @@
+/*  */
+.testimonial {
+}
+.testimonial-title {
+  font-size: $font-size-title;
+  font-weight: $font-weight-title;
+  color: $white;
+}
+.swiper {
+  padding: 60px 55px 120px;
+  // width: 600px;
+  // height: 300px;
+  &-wrapper {
+  }
+}
+
+.swiper-slide {
+  &__img {
+  }
+
+  &__text {
+    width: 470px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.text {
+  &__title {
+    color: $white;
+    &::before {
+      content: url("../img/icons/icons.svg#quote-up");
+      width: 60px;
+      height: 60px;
+      display: block;
+    }
+  }
+  &__comment {
+    color: rgba($color: $white, $alpha: 0.8);
+  }
+  &__username {
+    color: $orange;
+  }
+
+  &__major {
+    color: rgba($color: $white, $alpha: 0.8);
+  }
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__img {
+    width: 370px;
+    height: 470px;
+    object-fit: cover;
+    border-radius: 139px;
+  }
+}
+.swiper-button-prev {
+}
+.swiper-button-next {
+}
+/* -------------------- */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */
