@@ -1,9 +1,46 @@
-/*  */
+/* SEARCH FORM  */
 .form-search {
+  width: 65.8%;
+  margin: 0 auto;
+  padding: 35px 45px;
+  transform: translateY(50%);
+  background-color: #fff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.12);
   &__elem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 }
 .search-field {
+  width: 90%;
+  padding: 5px 0;
+  font-size: 1.25rem;
+  border: none;
+  outline: none;
+  &::placeholder {
+    color: $light-gray;
+  }
 }
-.icon-search {
+
+/* ----------------- */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
 }
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */
