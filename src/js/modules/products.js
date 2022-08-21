@@ -1,4 +1,4 @@
-export const category = [
+export const CATEGORY = [
   {
     id: 1,
     name: "chair",
@@ -25,7 +25,7 @@ export const category = [
   },
 ];
 
-export const products = [
+export const PRODUCTS = [
   {
     categoryId: 1,
     id: 1,
@@ -51,14 +51,6 @@ export const products = [
     price: 200,
   },
   {
-    categoryId: 1,
-    id: 4,
-    active: true,
-    image: "img/table_lamp.png",
-    name: "Table Lamp",
-    price: 50,
-  },
-  {
     categoryId: 2,
     id: 1,
     active: true,
@@ -73,6 +65,14 @@ export const products = [
     image: "img/bedside_table.png",
     name: "Bedside table",
     price: 100,
+  },
+  {
+    categoryId: 2,
+    id: 3,
+    active: true,
+    image: "img/table_lamp.png",
+    name: "Table Lamp",
+    price: 50,
   },
   {
     categoryId: 5,
@@ -90,7 +90,7 @@ export const products = [
     name: "Sofa - Dark",
     price: 300,
   },
-  { categoryId: 3, id: 1, active: false, image: "img/", name: "", price: 0 },
-  { categoryId: 4, id: 1, active: false, image: "img/", name: "", price: 0 },
-  { categoryId: 6, id: 1, active: false, image: "img/", name: "", price: 0 },
+  { categoryId: 3, id: 1, active: false, image: "img/wooden_bed.png", name: "Bed", price: 600 },
+  { categoryId: 4, id: 1, active: false, image: "img/cupboard_closet.png", name: "Closet", price: 800 },
+  { categoryId: 6, id: 1, active: false, image: "img/cabinet.png", name: "Cabinet", price: 150 },
 ];
