@@ -1,27 +1,50 @@
 <header class="header">
   <div class="header__container">
-    <a href="" class="logo"></a>
+    <a href="./index.html" class="logo"
+      ><img src="@img/icon_svg/logo.svg" alt="Logo"
+    /></a>
     <nav class="header__menu menu">
-      <ul class="menu__list">
-        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-        <li class="menu__item"><a href="" class="menu__link">About us</a></li>
-        <li class="menu__item icon-dropdown">
-          Products
-          <ul class="submenu">
-            <li class="submenu__item"><a href="" class="submenu__link"></a></li>
-            <li class="submenu__item"><a href="" class="submenu__link"></a></li>
-            <li class="submenu__item"><a href="" class="submenu__link"></a></li>
-            <li class="submenu__item"><a href="" class="submenu__link"></a></li>
-            <li class="submenu__item"><a href="" class="submenu__link"></a></li>
-            <li class="submenu__item"><a href="" class="submenu__link"></a></li>
-          </ul>
-        </li>
-        <li class="menu__item">
-          <a href="" class="menu__link">Testimonial</a>
-        </li>
-      </ul>
-      <a href="#contact" class="contact">Contact</a>
+      <div class="menu__body" id="main-menu">
+        <ul class="menu__list">
+          <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+          <li class="menu__item">
+            <a href="#about" class="menu__link">About us</a>
+          </li>
+          <li class="menu__item icon-dropdown">
+            <a class="menu__link" href="#" id="products-submenu">Products</a>
+            <ul class="submenu">
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Chair</a>
+              </li>
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Table</a>
+              </li>
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Bed</a>
+              </li>
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Closet</a>
+              </li>
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Sofa</a>
+              </li>
+              <li class="submenu__item">
+                <a href="" class="submenu__link">Cabinet</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="#testimonial" class="menu__link">Testimonial</a>
+          </li>
+        </ul>
+      </div>
     </nav>
+    <a href="#contact" class="menu__link contact-link">Contact</a>
     <button class="btn buy-btn">Buy online</button>
+    <div class="icon-menu">
+      <div class="icon-menu__line"></div>
+      <div class="icon-menu__line"></div>
+      <div class="icon-menu__line"></div>
+    </div>
   </div>
 </header>
