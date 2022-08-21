@@ -1,47 +1,117 @@
-@import "_variables";
+@use "sass:color";
+@use "sass:math";
 @import "_reset";
+@import "_swiper-bundle";
+@import "_variables";
+@import "_buttons";
+@import "_fonts";
+@import "_header";
+@import "_home";
+@import "_search";
+@import "_card";
+@import "_about";
+@import "_products";
+@import "_testimonial";
+@import "_contact";
+@import "_footer";
+
+/* ----- SCROLLBAR ------ */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px gray;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #2d2d2d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+/* ---------------------------- */
+
+/* ----- Service classes ----- */
+.invalid-feedback {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  line-height: 1.5;
+  text-align: left;
+  display: none;
+  width: 100%;
+  margin-top: 0.25rem;
+  color: #dc3545;
+  font-size: 80%;
+}
+/* ---------------------------- */
 
 [class*="__container"] {
   max-width: 1240px;
-  padding: 0 35px;
   margin: 0 auto;
+  padding: 90px 35px 0;
+}
+
+body {
+  color: $dark-blue;
+
+  font-family: $main-font;
+  font-size: $base-font-size;
+  font-weight: $base-weight;
+}
+a {
+  color: $dark-blue;
 }
 
 .container {
-  overflow: hidden;
   display: flex;
+  overflow: hidden;
   flex-direction: column;
+
   min-height: 100%;
 }
 .main {
   flex: 1 1 auto;
 
-  &__home {
-  }
+  // &__home {}
 
   &__about {
+    display: flex;
+    justify-content: space-between;
   }
 
-  &__products {
-  }
+  // &__products {}
 
   &__testimonial {
+    background-color: $dark-blue;
   }
 
-  &__conatact {
-  }
-}
-.home {
-  &__container {
-  }
-
-  &__title {
-  }
-
-  &__description {
-  }
-
-  &__banner {
-  }
+  // &__conatact {}
 }
 
+/* -------------------- */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */
