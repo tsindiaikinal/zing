@@ -38,6 +38,6 @@ const mainTasks = gulp.series(
 );
 
 export const dev = gulp.series(reset, mainTasks, gulp.parallel(serv, watcher));
-export const build = gulp.series(reset, mainTasks);
+export const build = gulp.series(reset, mainTasks, iconsvg);
 export const deployZIP = gulp.series(reset, mainTasks, iconsvg, zipper);
 export const deployFTP = gulp.series(reset, mainTasks, iconsvg, ftp);
