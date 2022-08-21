@@ -319,52 +319,59 @@
                 </div>
               </div>
             </div>
-            <form class="conatact__form form needs-validation">
+            <form class="conatact__form form needs-validation" novalidate>
               <h2 class="contact__title">Contact us</h2>
               <p class="contact__description">
                 Our team would love to hear from you!
               </p>
               <div class="input-wrapper">
-                <input
-                  class="form__input input-name form-control"
-                  type="text"
-                  name="username"
-                  
-                  id=""
-                  placeholder="First name"
-                />
-                <div class="invalid-feedback">Введите ваш имейл</div>
-                <input
-                  class="form__input input-surname form-control"
-                  type="text"
-                  name="surname"
-                  
-                  id=""
-                  placeholder="Last name"
-                />
-                <div class="invalid-feedback">Введите ваш имейл</div>
+                <div class="input-block input-block--size">
+                  <input
+                    class="form__input form-control"
+                    type="text"
+                    name="username"
+                    required
+                    id=""
+                    placeholder="First name"
+                  />
+                  <div class="invalid-feedback">Enter your name</div>
+                </div>
+                <div class="input-block input-block--size">
+                  <input
+                    class="form__input form-control"
+                    type="text"
+                    name="surname"
+                    required
+                    id=""
+                    placeholder="Last name"
+                  />
+                  <div class="invalid-feedback">Enter your surname</div>
+                </div>
               </div>
-              <input
-                class="form__input input-email form-control"
-                type="text"
-                name="email"
-                
-                id=""
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                placeholder="Email address"
-              />
-              <div class="invalid-feedback">Введите ваш имейл</div>
-              <textarea
-                class="form__message form-control"
-                name="message"
-                
-                id=""
-                cols="30"
-                rows="10"
-                placeholder="Message"
-              >
-              </textarea>
-              <div class="invalid-feedback">Введите ваш имейл</div>
+                <div class="input-block">
+                  <input
+                    class="form__input form-control"
+                    type="text"
+                    name="email"
+                    required
+                    id=""
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                    placeholder="Email address"
+                  />
+                  <div class="invalid-feedback">Enter your email</div>
+                </div>
+              <div class="input-block">
+                <textarea
+                  class="form__message form-control"
+                  name="message"
+                  required
+                  id=""
+                  cols="30"
+                  rows="10"
+                  placeholder="Message"
+                ></textarea>
+                <div class="invalid-feedback">Write your message</div>
+              </div>
               <button class="btn form__send-btn" type="submit">
                 Send message
               </button>
