@@ -1,21 +1,81 @@
 /* ---- CARD ---- */
 .card {
+  width: calc(1170px / 4 - 30px);
   &__body {
+    position: relative;
+    display: flex;
+    flex-direction: column;
   }
 
   &__img {
+    max-width: 200px;
+    max-height: 200px;
+    margin: 0 auto;
+    filter: drop-shadow(1mm 1mm 1.5mm rgba($black, .5));
+    transform: translateY(43%);
   }
 
   &__description {
+    padding: 118px 22px 22px;
+
+    background-color: $beige;
   }
 
   &__product-name {
+    display: block;
+
+    font-size: 1.5rem;
+    font-weight: $font-weight-title;
+    line-height: 1.6;
   }
 
   &__price {
+    display: inline-block;
+
+    width: 86.5%;
+    // padding: 5px 0;
+    margin: auto 0;
   }
 
   &__link {
+    display: inline-block;
+
+    width: 25px;
+    height: 25px;
+    margin-bottom: -6px;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    &:hover {
+      border: 1px solid $light-gray;
+    }
+  }
+}
+
+.icon-arrow {
+  width: 24px;
+  height: 24px;
+  &:hover {
+    fill: red;
   }
 }
 /* --------------- */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */

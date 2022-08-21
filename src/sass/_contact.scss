@@ -1,28 +1,104 @@
-/*  */
+/* ---- CONTACT BLOCK ---- */
 .contact {
   &__images {
+    width: 40.1709%;
+    padding-bottom: 100px;
   }
-
   &__title {
+    padding-top: 40px;
+
+    font-size: $font-size-title;
+    font-weight: $font-weight-title;
   }
 
   &__description {
+    padding-bottom: 15px;
+
+    color: $gray;
+
+    font-size: $common-font-size;
   }
 }
+
+.bk-img--sizes.bk-img {
+  margin-top: 10px;
+  &__wrapper-1 {
+    width: 57.4468%;
+  }
+  &__wrapper-2 {
+    width: 36.1702%;
+  }
+  &__2 {
+    [class*="bk-img__img"] {
+      width: 170px;
+      height: 270px;
+    }
+  }
+}
+
 .conatact {
   &__container {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__form {
+    width: 48.7179%;
   }
 }
 .form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
   &__input {
+    padding: 20px;
+    &::placeholder {
+      color: $light-gray;
+    }
+  }
+  .input-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .input-name {
+    width: 47.3684%;
+  }
+  .input-surname {
+    width: 47.3684%;
+  }
+  .input-email {
+    width: 100%;
   }
 
   &__message {
-  }
+    width: 100%;
+    padding: 20px;
 
-  &__send-btn {
+    resize: none;
+    &::placeholder {
+      color: $light-gray;
+    }
   }
 }
+
+/* ------------------ */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */

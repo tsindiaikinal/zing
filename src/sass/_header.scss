@@ -1,32 +1,197 @@
 /* ---- HEADER ---- */
 .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  padding: 20px 0;
+  background-color: $white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.12);
   &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0 !important;
   }
 
   &__menu {
+    display: flex;
+    justify-content: center;
+
+    width: 100%;
+    padding-left: 110px;
   }
 }
 .logo {
+  display: inline-block;
+  flex: 0 0 auto;
+  width: 54px;
+  height: 30px;
+  padding-top: 5px;
+
+  object-fit: contain;
 }
 .menu {
   &__list {
+    display: flex;
+    gap: 40px;
   }
-
   &__item {
   }
-
   &__link {
+    position: relative;
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+
+      width: 0;
+      height: 1px;
+
+      content: "";
+      transition: all 0.3s;
+
+      background-color: $orange;
+    }
+    &:hover::after {
+      left: 0;
+
+      width: 100%;
+    }
   }
 }
 .icon-dropdown {
+  position: relative;
+  &::after {
+    display: inline-block;
+
+    width: 12px;
+    margin-left: 12px;
+
+    content: url("../img/icons/icons.svg#arrow-down");
+    transition: transform 0.3s;
+  }
+}
+.icon-dropdown--rotate.icon-dropdown:after {
+  transform: scaleY(-1);
 }
 .submenu {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+
+  visibility: hidden;
+
+  transition: opacity 0.3s, visibility 0.3s;
+
+  opacity: 0;
+  background-color: $white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   &__item {
   }
 
   &__link {
+    display: inline-block;
+
+    width: 100%;
+    padding: 10px 55px 10px 15px;
+
+    transition: background-color 0.5s;
+    &:hover {
+      color: $white;
+      background-color: $orange;
+    }
   }
 }
-.contact {
+
+.submenu--active.submenu {
+  visibility: visible;
+
+  opacity: 1;
+}
+
+.show.menu__body {
+  transform: translateY(0);
+}
+
+.contact-link {
+  margin-right: 40px;
+  padding-bottom: 2px;
 }
 /* ---------------- */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+  .menu {
+    &__list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+    }
+    &__item {
+    }
+    &__link {
+      font-size: ($base-font-size + 2);
+    }
+    &__body {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      overflow: auto;
+
+      width: 100%;
+      height: 100%;
+      padding: 0 35px;
+      transition: transform ease-in-out 0.5s;
+      transform: translateY(-100%);
+
+      background-color: $white;
+      &::before {
+        position: sticky;
+        z-index: 3;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        width: 100%;
+        height: 90px;
+        content: "";
+        background-color: $white;
+      }
+    }
+  }
+  .submenu {
+  /* top: 50px;
+  background-color: $white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); */
+  &__item {
+  }
+
+  &__link {
+    /* display: inline-block;
+    width: 100%;
+    padding: 10px 55px 10px 15px;
+    &:hover {
+      color: $white;
+      background-color: $orange;
+    } */
+  }
+}
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */

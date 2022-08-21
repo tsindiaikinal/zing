@@ -1,19 +1,123 @@
 /* ----- BUTTONS ----- */
 /* DEFAULT BUTTON */
 .btn {
+  cursor: pointer;
 
+  border: none;
+  background: none;
 }
 /* *** */
 
 /* TABS */
 
 .tab {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 46.4103%;
   &__link {
+    padding: 5px 10px;
+
+    color: $gray;
+
+    font-size: 1.25rem;
   }
 }
+.active-link {
+  color: $orange;
+}
+
 /* *** */
 
 .buy-btn {
+  flex: 1 0 112px;
+
+  padding: 12px 10px;
+
+  transition: background-color 0.3s;
+
+  color: $white;
+  background-color: $orange;
+  &:hover {
+    background-color: lighten($orange, 10%);
+  }
+}
+
+.search-btn {
+  width: 24px;
+  height: 24px;
+}
+
+.icon-search {
+  transition: fill 0.3s;
+  &:hover {
+    fill: darken($color: $light-gray, $amount: 50%);
+  }
+}
+
+.form__send-btn {
+  padding: 20px;
+
+  color: $white;
+  background-color: $orange;
 }
 
 /* ---------- */
+
+/* ----- BURGER MENU ------- */
+.icon-menu {
+  margin-left: 25px;
+  display: none;
+}
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+  .icon-menu {
+    position: relative;
+    z-index: 6;
+    display: flex;
+    flex: 0 0 35px;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    cursor: pointer;
+    transition: height 0.3s;
+    &:hover .icon-menu__line {
+      box-shadow: 0 2px 3px $black, 0 2px 2px $white;
+    }
+    &__line {
+      height: 1px;
+
+      transition: all 0.3s;
+
+      background-color: $black;
+    }
+  }
+  .icon-close.icon-menu {
+    .icon-menu__line:nth-child(2) {
+      opacity: 0;
+    }
+    .icon-menu__line:first-child {
+      transform: rotate(45deg) translate(17px);
+    }
+    .icon-menu__line:last-child {
+      transform: rotate(-45deg) translate(17px);
+    }
+  }
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */

@@ -1,42 +1,80 @@
 .footer {
+  padding-bottom: 18px;
+
+  background-color: $beige;
   &__container {
-  }
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
-  &__address {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
   }
-
-  &__quick-links {
-  }
-
-  &__title {
-  }
-
-  &__legal {
-  }
-
-  &__socials {
-  }
-
+  /*  &__address {}
+  &__quick-links {}
+  &__title {}
+  &__legal {}
+  &__socials {} */
   &__copyright {
+    display: block;
+
+    text-align: center;
+
+    font-size: 0.875rem;
   }
-}
-.logo {
-}
-.logo--footer {
 }
 .address {
   &__item {
+    margin-top: 12px;
+
+    font-style: normal;
   }
 }
 .quick-links {
   &__item {
+    display: block;
+    margin-top: 18px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 .footer-legal {
   &__link {
+    display: block;
+    margin-top: 18px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 .socials {
   &__link {
+    display: block;
+
+    margin-top: 18px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
+/* ------------------ */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */

@@ -1,30 +1,149 @@
-/*  */
+/* BLOCK ABOUT */
 .about {
   &__container {
+    display: flex;
+    justify-content: space-between;
   }
 
   &__wrapper {
+    width: 48.717948718%;
   }
 
   &__title {
+    font-size: $font-size-title;
+    font-weight: $font-weight-title;
   }
 
   &__remarks {
+    width: 82%;
+    padding-top: 24px;
+
+    color: $gray;
+
+    font-size: $common-font-size;
+    line-height: 1.6;
   }
 
   &__component {
-  }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 
-  &__img {
+    padding-top: 80px;
   }
 }
 .component {
+  width: calc(100% / 2 - 1%);
+  // margin: 15px;
   &__number {
+    color: $orange;
+
+    font-size: 4rem;
   }
 
   &__title {
+    padding: 20px 0;
+
+    color: $black;
+
+    font-size: 1.5rem;
+    line-height: 1;
   }
 
   &__description {
+    padding-bottom: 30px;
+
+    color: $light-gray;
+
+    font-size: $common-font-size;
+    line-height: 1.6;
   }
 }
+
+.bk-img {
+  display: flex;
+  justify-content: space-between;
+  max-height: 633px;
+  margin-top: 136px;
+  &__wrapper-1 {
+    margin-top: 75px;
+    overflow: hidden;
+    width: 47.3684%;
+  }
+  &__wrapper-2 {
+    width: 47.3684%;
+    margin-bottom: 60px;
+    overflow: hidden;
+  }
+  &__1 {
+    animation: motion-top 10s linear infinite;
+    [class*="bk-img__img"] {
+      &:nth-child(odd) {
+        width: 270px;
+        height: 370px;
+      }
+      [class*="bk-img__img"] {
+        &:nth-child(even) {
+          width: 270px;
+          height: 157px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    margin-bottom: 30px;
+
+    object-fit: cover;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__2 {
+    animation: motion-bottom 10s linear infinite;
+    [class*="bk-img__img"] {
+      width: 270px;
+      height: 270px;
+    }
+  }
+}
+
+@keyframes motion-top {
+  0% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+@keyframes motion-bottom {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(1.2%);
+  }
+}
+
+/* --------------------- */
+
+/* -------------------- MEDIA QUERIIS ------------------ */
+
+@media screen and (max-width: $xxl) {
+}
+@media screen and (max-width: $xl) {
+}
+@media screen and (max-width: $lg) {
+}
+@media screen and (max-width: $md) {
+}
+@media screen and (max-width: $sm) {
+}
+@media screen and (max-width: $ms) {
+}
+@media screen and (max-width: $xs) {
+}
+
+/* ------------------------------------ */

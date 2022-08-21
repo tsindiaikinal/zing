@@ -2,25 +2,36 @@
 .home {
   &__container {
     text-align: center;
+    padding-top: 165px !important;
   }
 
   &__title {
     width: 82%;
-    font-weight: $font-weight-title;
-    font-size: $font-main-title;
     margin: 0 auto;
     padding-bottom: 40px;
+    font-size: $font-main-title;
+    font-weight: $font-weight-title;
+    position: relative;
+    &::after {
+      content: url("../img/spiral_arrow.png");
+      position: absolute;
+      top:55px;
+      right: -62px;
+    }
   }
 
   &__description {
     width: 65.5%;
-    font-size: 1.25rem;
-    color: $gray;
-    line-height: 32px;
     margin: 0 auto;
+
+    color: $gray;
+
+    font-size: 1.25rem;
+    line-height: 32px;
   }
 
   &__banner {
+    width: 100%;
   }
 }
 /* ----------------------- */
