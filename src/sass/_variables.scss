@@ -9,12 +9,12 @@ $xxl: 1399.98px;
 /* ---------- */
 
 /* COLORS */
-$black: #000000;
-$dark-blue: #112B3C;
+$black: #000;
+$dark-blue: #112b3c;
 $gray: #828282;
-$light-gray: #BDBDBD;
-$orange: #F66B0E;
-$beige: #FFF8F0;
+$light-gray: #bdbdbd;
+$orange: #f66b0e;
+$beige: #fff8f0;
 $white: #fff;
 
 /* ------------- */
@@ -42,26 +42,25 @@ $font-weight-title: 700;
 $font-weight-link: "";
 /* ----------------------------------*/
 
-
 /* ------ COMMON CLASSES ---------- */
 // for insert to code: @extend
 %common-class {
-    font-size: $base-font-size;
-    font-family: $main-font;
-    font-weight: $base-weight;
+  font-family: $main-font;
+  font-size: $base-font-size;
+  font-weight: $base-weight;
 }
 /* ---------------------------- */
-
 
 /* --------- MIXINS --------- */
 // template for insert in code
 // for insert in code: @include
 
 @mixin base($font, $fontSize, $fontWeight, $color) {
-    font-size: $fontSize;
-    font-family: $font;
-    font-weight: $fontWeight;
-    color: $color;
+  color: $color;
+
+  font-family: $font;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
 }
 /* ----- USE FUNCTION ------ */
 // include to top scss file: @use "sass:name_function"
