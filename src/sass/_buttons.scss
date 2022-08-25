@@ -7,9 +7,6 @@
   font-weight: normal;
   opacity: 0.9;
   transition: background-color 0.3s;
-  &:hover {
-    background-color: lighten($orange, 7%);
-  }
 }
 /* *** */
 
@@ -41,8 +38,8 @@
   padding: 12px 10px;
   color: $white;
   background-color: $orange;
-  &:hover {
-    background-color: lighten($orange, 4%);
+   &:hover {
+    background-color: lighten($orange, 7%);
   }
 }
 
@@ -65,6 +62,9 @@
   padding: 20px;
   color: $white;
   background-color: $orange;
+   &:hover {
+    background-color: lighten($orange, 7%);
+  }
 }
 .btn__content {
   position: relative;
