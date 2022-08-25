@@ -5,3 +5,4 @@ dist
 #files
 gulp/config/ftp.js
 package-lock.json
+gulp/version.json
