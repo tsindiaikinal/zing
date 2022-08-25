@@ -1,5 +1,8 @@
 import modernizr from "./modules/modernizr.js";
-import { products, category } from "./modules/products.js";
+import validate from "./modules/validate.js";
+import burgerMenu from "./modules/burgerMenu.js";
+import rippleEffect from "./modules/rippleEffect.js";
+import cards from "./modules/cards.js";
 
 import Swiper, {
   Navigation,
@@ -11,7 +14,8 @@ import Swiper, {
   EffectFade,
 } from "swiper";
 
-const swiper = new Swiper(".swiper", {
+/* SETTINGS SWIPER SLIDER */
+let swiper = new Swiper(".swiper", {
   // configure Swiper to use modules
   modules: [
     Navigation,
@@ -52,22 +56,16 @@ const swiper = new Swiper(".swiper", {
     draggable: true,
   },
 });
+
 /* ----------------------------- */
 
-const viewArea = document.querySelector(".products__view");
-products.forEach((product) => {
-  if (product.active) {
-    let card = `<div class="card">
-                <div class="card__body">
-                  <img src="${product.image}" alt="Product" class="card__img" />
-                  <div class="card__description">
-                    <strong class="card__product-name">${product.name}</strong>
-                    <span class="card__price">$${product.price}</span>
-                    <a href="#" class="card__link"
-                      ><img class="icon-arrow" src="img/icons/icons.svg#arrow-right"></a>
-                  </div>
-                </div>
-              </div>`;
-    viewArea.innerHTML += card;
-  }
-});
+document
+  .querySelector("#products-submenu")
+  .addEventListener("click", function () {
+    document.querySelector(".submenu").classList.toggle("submenu--active");
+    document
+      .querySelector(".icon-dropdown")
+      .classList.toggle("icon-dropdown--rotate");
+  });
+
+// *************************************
