@@ -20,8 +20,8 @@ export default (function () {
 
   function addEffect(e) {
     let animation = e.target.querySelector(".ripple-animation");
-    animation.style.left = e.offsetX + "px";
-    animation.style.top = e.offsetY + "px";
+    animation.style.left = `${e.offsetX}px`;
+    animation.style.top = `${e.offsetY}px`;
     setTimeout(() => {
       e.target.querySelector(".ripple-container").remove();
     }, 500);
