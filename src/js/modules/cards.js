@@ -9,7 +9,7 @@ export default (function () {
       .classList.add("active-link");
     printProductCards(prod);
   });
-/* DISPLAY CARDS ON THE PAGE */
+  /* DISPLAY CARDS ON THE PAGE */
   function printProductCards(products) {
     const viewArea = document.querySelector(".products__view");
     viewArea.innerHTML = "";
@@ -18,11 +18,13 @@ export default (function () {
         let card = `<div class="card">
                   <div class="card__body">
                     <img src="${product.image}" alt="Product" class="card__img" />
-                    <div class="card__description">
-                      <strong class="card__product-name">${product.name}</strong>
-                      <span class="card__price">$${product.price}</span>
-                      <a href="#" class="card__link"
-                        ><img class="icon-arrow" src="img/icons/icons.svg#arrow-right"></a>
+                    <div class="card__bg">
+                      <div class="card__description">
+                        <strong class="card__product-name">${product.name}</strong>
+                        <span class="card__price">$${product.price}</span>
+                        <a href="#" class="card__link"
+                          ><img class="icon-arrow" src="img/icons/icons.svg#arrow-right"></a>
+                      </div>
                     </div>
                   </div>
                 </div>`;
@@ -34,20 +36,22 @@ export default (function () {
                     <img src="${
                       product.image
                     }" alt="Product" class="card__img" />
-                    <div class="card__description">
-                      <strong class="card__product-name">${
-                        product.name
-                      }</strong>
-                      <span class="card__price">${(product.price =
-                        "Not available")}</span>
-                    </div>
+                    <div class="card__bg">
+                      <div class="card__description">
+                        <strong class="card__product-name">${
+                          product.name
+                        }</strong>
+                        <span class="card__price">${(product.price =
+                          "Not available")}</span>
+                      </div>
+                  </div>
                   </div>
                 </div>`;
         viewArea.innerHTML += card;
       }
     });
   }
-/* TABS. FILTER PRODUCT BY CATEGORY */
+  /* TABS. FILTER PRODUCT BY CATEGORY */
   document.querySelector(".tab").addEventListener("click", function (e) {
     let tabLinks = document.querySelectorAll(".tab .tab__link");
     tabLinks.forEach((elem) => {
