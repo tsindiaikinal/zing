@@ -1,5 +1,6 @@
 import modernizr from "./modules/modernizr.js";
 import validate from "./modules/validate.js";
+import submenu from "./modules/submenu.js";
 import burgerMenu from "./modules/burgerMenu.js";
 import rippleEffect from "./modules/rippleEffect.js";
 import cards from "./modules/cards.js";
@@ -58,14 +59,5 @@ let swiper = new Swiper(".swiper", {
 });
 
 /* ----------------------------- */
-
-document
-  .querySelector("#products-submenu")
-  .addEventListener("click", function () {
-    document.querySelector(".submenu").classList.toggle("submenu--active");
-    document
-      .querySelector(".icon-dropdown")
-      .classList.toggle("icon-dropdown--rotate");
-  });
 
 // *************************************
