@@ -1,16 +1,19 @@
 /* ---- CONTACT BLOCK ---- */
 @import "_validate";
 .contact {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
   &__images {
     width: 40.1709%;
+    margin-top: 0;
   }
   &__title {
     padding-top: 40px;
-
     font-size: $font-size-title;
     font-weight: $font-weight-title;
   }
-
   &__description {
     padding-bottom: 15px;
 
@@ -18,40 +21,35 @@
 
     font-size: $common-font-size;
   }
-}
-
-.bk-img--sizes.bk-img {
-  margin-top: 10px;
-  &__wrapper-1 {
-    width: 57.4468%;
-  }
-  &__wrapper-2 {
-    width: 36.1702%;
-  }
-  &__2 {
-    [class*="bk-img__img"] {
-      width: 170px;
-      height: 270px;
-    }
-  }
-}
-
-.conatact {
-  &__container {
-    display: flex;
-    justify-content: space-between;
-  }
-
   &__form {
     width: 48.7179%;
   }
 }
+
+.bk-img--sizes {
+  .bk-img {
+    &__wrapper-1 {
+      width: 57.4468%;
+    }
+    &__wrapper-2 {
+      width: 36.1702%;
+    }
+    &__2 {
+      [class*="bk-img__img"] {
+        width: 170px;
+        height: 270px;
+      }
+    }
+  }
+}
+
 .form {
   display: flex;
   flex-direction: column;
 
   gap: 20px;
   &__input {
+    display: block;
     width: 100%;
     padding: 20px;
     border: 1px solid #112b3c;
@@ -91,10 +89,67 @@
 @media screen and (max-width: $xl) {
 }
 @media screen and (max-width: $lg) {
+  .contact {
+    &__images {
+      width: 48%;
+    }
+  }
+
+  .contact {
+    &__form {
+      width: 48%;
+    }
+  }
+  .form {
+    .input-block {
+      &--size {
+        width: 100%;
+        &:first-of-type {
+          padding-bottom: 20px;
+        }
+      }
+    }
+    .input-wrapper {
+      flex-wrap: wrap;
+    }
+  }
 }
 @media screen and (max-width: $md) {
+  .contact {
+    &__container {
+      flex-direction: column;
+    }
+    &__images {
+      width: 100%;
+      order: 2;
+      margin-top: 50px;
+    }
+    &__title {
+      padding-top: 0;
+      font-size: 3.5rem;
+    }
+    &__form {
+      width: 100%;
+      order: 1;
+    }
+  }
+  .bk-img--sizes {
+    .bk-img {
+      &__2 {
+        [class*="bk-img__img"] {
+          width: 100%;
+          height: 270px;
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: $sm) {
+  .contact {
+    &__title {
+      font-size: 2.5rem;
+    }
+  }
 }
 @media screen and (max-width: $ms) {
 }
