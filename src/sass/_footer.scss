@@ -1,20 +1,27 @@
-.footer {
-  padding-bottom: 18px;
+/* FOOTER BLOCK */
+%footer-block-props {
+  display: block;
+  margin-top: 18px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
 
+.footer {
+  margin-top: 100px;
+  padding-bottom: 18px;
   background-color: $beige;
   &__container {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    margin-top: 100px !important;
     padding-top: 80px !important;
     padding-bottom: 80px !important;
   }
-  /*  &__address {}
-  &__quick-links {}
-  &__title {}
-  &__legal {}
-  &__socials {} */
+  &__title {
+    font-size: $common-font-size;
+    font-weight: $font-weight-title;
+  }
   &__copyright {
     display: block;
 
@@ -32,30 +39,17 @@
 }
 .quick-links {
   &__item {
-    display: block;
-    margin-top: 18px;
-    &:hover {
-      text-decoration: underline;
-    }
+    @extend %footer-block-props;
   }
 }
-.footer-legal {
+.legal {
   &__link {
-    display: block;
-    margin-top: 18px;
-    &:hover {
-      text-decoration: underline;
-    }
+    @extend %footer-block-props;
   }
 }
 .socials {
   &__link {
-    display: block;
-
-    margin-top: 18px;
-    &:hover {
-      text-decoration: underline;
-    }
+    @extend %footer-block-props;
   }
 }
 /* ------------------ */
@@ -69,8 +63,66 @@
 @media screen and (max-width: $lg) {
 }
 @media screen and (max-width: $md) {
+  .footer {
+    margin-top: 50px;
+  }
 }
 @media screen and (max-width: $sm) {
+  .footer {
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+    &--logo {
+      display: block;
+      padding: 0;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .accordion {
+    width: 100%;
+    padding: 10px 0;
+    position: relative;
+    cursor: pointer;
+    background: linear-gradient(
+      to bottom,
+      #fff8f0,
+      #fff8f0,
+      rgba(255, 255, 255, 1)
+    );
+    &:after {
+      content: url("../img/icons/icons.svg#arrow-down");
+      position: absolute;
+      top: 9px;
+      right: 0;
+      width: 25px;
+      height: 25px;
+      pointer-events: none;
+      transition: transform 0.3s;
+    }
+  }
+
+  .accordion--rotate.accordion:after {
+    transform: scaleY(-1);
+  }
+
+  .item-active.accordion__body {
+    display: block;
+    height: auto;
+    opacity: 1;
+  }
+
+  .accordion__body {
+    display: none;
+    width: 100%;
+    height: 0;
+    box-shadow: none;
+  }
 }
 @media screen and (max-width: $ms) {
 }
