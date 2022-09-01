@@ -17,7 +17,7 @@ export default (function () {
       if (product.active) {
         let card = `<div class="card">
                   <div class="card__body">
-                    <img src="${product.image}" alt="Product" class="card__img" />
+                    <div class="card__img-container"><img src="${product.image}" alt="Product" class="card__img" /></div>
                     <div class="card__bg">
                       <div class="card__description">
                         <strong class="card__product-name">${product.name}</strong>
@@ -33,9 +33,11 @@ export default (function () {
       if (!product.active) {
         let card = `<div class="card" style="opacity: .5">
                   <div class="card__body">
-                    <img src="${
-                      product.image
-                    }" alt="Product" class="card__img" />
+                    <div class="card__img-container">
+                      <img src="${
+                        product.image
+                      }" alt="Product" class="card__img" />
+                    </div>
                     <div class="card__bg">
                       <div class="card__description">
                         <strong class="card__product-name">${
@@ -59,14 +61,16 @@ export default (function () {
         elem.classList.remove("active-link");
       }
     });
-    e.target.classList.add("active-link");
-    let products = [...prod].filter(function (product) {
-      return product.categoryId === parseInt(e.target.dataset.category);
-    });
-    if (e.target.dataset.category === "0") {
-      printProductCards(prod);
-    } else {
-      printProductCards(products);
+    if (e.target.classList.contains("tab__link")) {
+      e.target.classList.add("active-link");
+      let products = [...prod].filter(function (product) {
+        return product.categoryId === parseInt(e.target.dataset.category);
+      });
+      if (e.target.dataset.category === "0") {
+        printProductCards(prod);
+      } else {
+        printProductCards(products);
+      }
     }
   });
 })();
